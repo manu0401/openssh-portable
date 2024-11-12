@@ -93,9 +93,7 @@ fd_table_initialize()
 
 	stdio_mode_env = getenv("OPENSSH_STDIO_MODE");
 	if (stdio_mode_env != NULL) {
-		if (strcmp(stdio_mode_env, "unknown") == 0)
-			stdio_mode = UNKNOWN_FD;
-		else if (strcmp(stdio_mode_env, "sock") == 0)
+		if (strcmp(stdio_mode_env, "sock") == 0)
 			stdio_mode = SOCK_FD;
 		else if (strcmp(stdio_mode_env, "nonsock") == 0)
 			stdio_mode = NONSOCK_FD;
